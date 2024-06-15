@@ -13,7 +13,7 @@ import (
 
 	secretmanager "cloud.google.com/go/secretmanager/apiv1"
 	smpb "cloud.google.com/go/secretmanager/apiv1/secretmanagerpb"
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // Get returns the named secret value as plaintext.

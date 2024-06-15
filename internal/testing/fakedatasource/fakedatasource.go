@@ -11,12 +11,12 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/mod/module"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/licenses"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 var errNotImplemented = fmt.Errorf("not implemented: %w", derrors.Unsupported)

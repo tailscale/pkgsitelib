@@ -12,8 +12,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/google/safehtml"
-	"golang.org/x/pkgsite/internal/osv"
-	"golang.org/x/pkgsite/internal/vuln"
+	"github.com/tailscale/pkgsitelib/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/vuln"
 )
 
 var testEntries = []*osv.Entry{

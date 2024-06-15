@@ -17,13 +17,13 @@ import (
 	"time"
 
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/memory"
-	"golang.org/x/pkgsite/internal/middleware"
-	"golang.org/x/pkgsite/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/memory"
+	"github.com/tailscale/pkgsitelib/internal/middleware"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
 	"golang.org/x/sync/errgroup"
 )
 

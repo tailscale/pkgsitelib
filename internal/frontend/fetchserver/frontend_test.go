@@ -8,10 +8,10 @@ import (
 	"context"
 	"testing"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/postgres"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 var testDB *postgres.DB

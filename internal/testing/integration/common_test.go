@@ -5,8 +5,8 @@
 package integration
 
 import (
-	"golang.org/x/pkgsite/internal/postgres"
-	"golang.org/x/pkgsite/internal/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
 )
 
 var (

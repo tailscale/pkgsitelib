@@ -8,7 +8,7 @@ import (
 	"archive/zip"
 	"sync"
 
-	"golang.org/x/pkgsite/internal"
+	"github.com/tailscale/pkgsitelib/internal"
 )
 
 // cache caches proxy info, mod and zip calls.

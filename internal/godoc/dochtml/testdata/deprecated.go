@@ -24,15 +24,15 @@ var BadV = 2
 func GoodF() {}
 
 /*
-   BadF is bad.
+BadF is bad.
 
-   Deprecated: use GoodF.
+Deprecated: use GoodF.
 */
 func BadF() {}
 
 /*
-   WrongF is wrong.
-   Deprecated: use GoodF.
+WrongF is wrong.
+Deprecated: use GoodF.
 */
 func WrongF() {}
 

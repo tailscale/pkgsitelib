@@ -19,15 +19,15 @@ import (
 	"sort"
 	"strings"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/frontend/client"
+	"github.com/tailscale/pkgsitelib/internal/frontend/versions"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/symbol"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"go.opencensus.io/plugin/ochttp"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/frontend/client"
-	"golang.org/x/pkgsite/internal/frontend/versions"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/symbol"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 var (

@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // ErrorReporting returns a middleware that reports any server errors using the

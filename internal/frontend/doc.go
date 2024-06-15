@@ -11,13 +11,13 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc"
-	"golang.org/x/pkgsite/internal/godoc/dochtml"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/middleware/stats"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/middleware/stats"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 func renderDocParts(ctx context.Context, u *internal.Unit, docPkg *godoc.Package,

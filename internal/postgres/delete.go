@@ -10,10 +10,10 @@ import (
 
 	"github.com/Masterminds/squirrel"
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // DeleteModule deletes a Version from the database.

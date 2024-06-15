@@ -10,8 +10,8 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 func TestSymbolSearch(t *testing.T) {

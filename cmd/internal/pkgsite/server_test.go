@@ -14,11 +14,11 @@ import (
 	"regexp"
 	"testing"
 
+	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/internal/testenv"
+	"github.com/tailscale/pkgsitelib/internal/testing/htmlcheck"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 	"golang.org/x/net/html"
-	"golang.org/x/pkgsite/internal/proxy/proxytest"
-	"golang.org/x/pkgsite/internal/testenv"
-	"golang.org/x/pkgsite/internal/testing/htmlcheck"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
 )
 
 var (

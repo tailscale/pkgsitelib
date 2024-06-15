@@ -11,8 +11,8 @@ import (
 	"io"
 	"sync"
 
+	"github.com/tailscale/pkgsitelib/internal/log"
 	"go.opencensus.io/trace"
-	"golang.org/x/pkgsite/internal/log"
 )
 
 type debugTraceExporter struct {

@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/config"
 )
 
 func TestValidateAppVersion(t *testing.T) {

@@ -12,8 +12,8 @@ import (
 	"net/url"
 	"time"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 const (

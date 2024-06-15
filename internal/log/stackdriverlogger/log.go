@@ -16,10 +16,10 @@ import (
 	"sync"
 
 	"cloud.google.com/go/logging"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/experiment"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 func init() {

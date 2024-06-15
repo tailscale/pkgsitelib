@@ -16,17 +16,17 @@ import (
 	"time"
 
 	"github.com/google/safehtml/template/uncheckedconversions"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/cookie"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/experiment"
-	"golang.org/x/pkgsite/internal/frontend/page"
-	"golang.org/x/pkgsite/internal/frontend/serrors"
-	"golang.org/x/pkgsite/internal/frontend/urlinfo"
-	"golang.org/x/pkgsite/internal/frontend/versions"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/cookie"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal/frontend/page"
+	"github.com/tailscale/pkgsitelib/internal/frontend/serrors"
+	"github.com/tailscale/pkgsitelib/internal/frontend/urlinfo"
+	"github.com/tailscale/pkgsitelib/internal/frontend/versions"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/version"
 )
 
 // servePathNotFoundPage serves a 404 page for the requested path, or redirects

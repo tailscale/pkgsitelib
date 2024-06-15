@@ -8,7 +8,7 @@ package page
 import (
 	"github.com/google/safehtml"
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
 )
 
 // BasePage contains fields shared by all pages when rendering templates.

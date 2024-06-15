@@ -12,10 +12,10 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/experiment"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 func TestReadme(t *testing.T) {

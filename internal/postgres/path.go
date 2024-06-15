@@ -13,9 +13,9 @@ import (
 	"strings"
 
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // GetLatestMajorPathForV1Path reports the latest unit path in the series for

@@ -15,12 +15,12 @@ import (
 	"testing"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal/testing/htmlcheck"
+	"github.com/tailscale/pkgsitelib/internal/testing/pagecheck"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 	"golang.org/x/net/html"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/postgres"
-	"golang.org/x/pkgsite/internal/testing/htmlcheck"
-	"golang.org/x/pkgsite/internal/testing/pagecheck"
-	"golang.org/x/pkgsite/internal/testing/sample"
 )
 
 const pseudoVersion = "v0.0.0-20140414041502-123456789012"

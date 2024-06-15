@@ -11,7 +11,7 @@ import (
 
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/stdlib"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 func BenchmarkBulkInsert(b *testing.B) {

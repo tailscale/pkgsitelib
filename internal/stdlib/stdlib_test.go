@@ -12,9 +12,9 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/tailscale/pkgsitelib/internal/testenv"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal/testenv"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 var (

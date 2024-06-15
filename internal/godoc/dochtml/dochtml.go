@@ -26,9 +26,9 @@ import (
 	"github.com/google/safehtml/legacyconversions"
 	"github.com/google/safehtml/template"
 	"github.com/google/safehtml/uncheckedconversions"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc/dochtml/internal/render"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml/internal/render"
 	"golang.org/x/text/cases"
 	"golang.org/x/text/language"
 )

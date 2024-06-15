@@ -7,7 +7,7 @@ package middleware
 import (
 	"net/http"
 
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // Panic returns a middleware that executes panicHandler on any panic

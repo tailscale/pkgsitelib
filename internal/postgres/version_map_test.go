@@ -11,9 +11,9 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/testing/sample"
-	"golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal/version"
 )
 
 func TestReadAndWriteVersionMap(t *testing.T) {

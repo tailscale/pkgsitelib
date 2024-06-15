@@ -8,11 +8,11 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 // upsertSymbolHistory upserts data into the symbol_history table.

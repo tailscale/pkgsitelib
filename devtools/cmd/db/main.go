@@ -17,9 +17,9 @@ import (
 
 	_ "github.com/jackc/pgx/v4/stdlib" // for pgx driver
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal/config/serverconfig"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/config/serverconfig"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 func main() {

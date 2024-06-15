@@ -5,7 +5,7 @@
 package internal
 
 import (
-	"golang.org/x/pkgsite/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
 )
 
 // UnitMeta represents metadata about a unit.

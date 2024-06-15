@@ -4,7 +4,7 @@
 
 package p_test
 
-import "golang.org/x/pkgsite/internal/godoc/testdata/p"
+import "github.com/tailscale/pkgsitelib/internal/godoc/testdata/p"
 
 // non-executable example
 func ExampleTF() {

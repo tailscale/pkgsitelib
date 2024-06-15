@@ -12,10 +12,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/middleware/stats"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/middleware/stats"
 )
 
 // GetNestedModules returns the latest major version of all nested modules

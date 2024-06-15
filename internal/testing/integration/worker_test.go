@@ -18,13 +18,13 @@ import (
 	"github.com/alicebob/miniredis/v2"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal/cache"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/index"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/queue"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/worker"
+	"github.com/tailscale/pkgsitelib/internal/cache"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/index"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/queue"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/worker"
 )
 
 func setupWorker(ctx context.Context, t *testing.T, proxyClient *proxy.Client, indexClient *index.Client,

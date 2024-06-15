@@ -15,10 +15,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 	"go.opencensus.io/plugin/ochttp"
 	"golang.org/x/net/context/ctxhttp"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
 )
 
 // A Client is used by the worker service to communicate with the module index.

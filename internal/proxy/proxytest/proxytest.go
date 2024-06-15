@@ -10,9 +10,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 	"golang.org/x/mod/modfile"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
 	"golang.org/x/tools/txtar"
 )
 

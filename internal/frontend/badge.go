@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/frontend/page"
+	"github.com/tailscale/pkgsitelib/internal/frontend/page"
 )
 
 type BadgePage struct {

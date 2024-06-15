@@ -17,11 +17,11 @@ import (
 
 	"github.com/go-redis/redis/v8"
 	rrate "github.com/go-redis/redis_rate/v9"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/log"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/log"
 )
 
 var (

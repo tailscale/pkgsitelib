@@ -16,14 +16,14 @@ import (
 	"strings"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/fetch"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/lru"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/fetch"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/lru"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 // FetchDataSource implements the internal.DataSource interface, by trying a list of

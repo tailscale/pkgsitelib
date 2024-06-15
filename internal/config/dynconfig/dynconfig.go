@@ -15,9 +15,9 @@ import (
 	"strings"
 
 	"cloud.google.com/go/storage"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
 	"gopkg.in/yaml.v3"
 )
 

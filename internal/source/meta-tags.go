@@ -11,7 +11,7 @@ import (
 	"io"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // This code adapted from https://go.googlesource.com/gddo/+/refs/heads/master/gosrc/gosrc.go.

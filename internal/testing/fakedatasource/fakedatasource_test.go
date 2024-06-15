@@ -8,7 +8,7 @@ import (
 	"context"
 	"testing"
 
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 func TestGetLatestInfo_MajorPath(t *testing.T) {

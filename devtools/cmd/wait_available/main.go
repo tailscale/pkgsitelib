@@ -16,7 +16,7 @@ import (
 	"syscall"
 	"time"
 
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 var timeout = flag.Duration("timeout", 15*time.Second, "timeout duration")

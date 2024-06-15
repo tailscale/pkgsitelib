@@ -12,8 +12,8 @@ import (
 	"go/token"
 	"io"
 
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc/codec"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc/codec"
 )
 
 // The encoding type identifies the encoding being used, to distinguish them

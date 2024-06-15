@@ -9,13 +9,13 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/osv"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/testing/fakedatasource"
-	"golang.org/x/pkgsite/internal/testing/sample"
-	"golang.org/x/pkgsite/internal/version"
-	"golang.org/x/pkgsite/internal/vuln"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/testing/fakedatasource"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal/version"
+	"github.com/tailscale/pkgsitelib/internal/vuln"
 )
 
 var (

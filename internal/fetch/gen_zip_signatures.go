@@ -25,10 +25,10 @@ import (
 	"text/template"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/fetch"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/fetch"
-	"golang.org/x/pkgsite/internal/proxy"
 )
 
 var (
@@ -200,7 +200,7 @@ var tmpl = template.Must(template.New("").Parse(`
 
 package fetch
 
-import "golang.org/x/pkgsite/internal"
+import "github.com/tailscale/pkgsitelib/internal"
 
 var ZipSignatures = map[string][]internal.Modver{
 {{range .}}

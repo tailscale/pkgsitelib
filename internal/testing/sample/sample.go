@@ -20,11 +20,11 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/google/licensecheck"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/godoc"
-	"golang.org/x/pkgsite/internal/licenses"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/godoc"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 // These sample values can be used to construct test cases.

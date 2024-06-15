@@ -8,9 +8,9 @@ import (
 	"context"
 	"testing"
 
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/proxy/proxytest"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 func TestLatestModuleVersions(t *testing.T) {

@@ -13,11 +13,11 @@ import (
 	"strings"
 
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/middleware/stats"
-	"golang.org/x/pkgsite/internal/postgres/search"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/middleware/stats"
+	"github.com/tailscale/pkgsitelib/internal/postgres/search"
 	"golang.org/x/sync/errgroup"
 )
 

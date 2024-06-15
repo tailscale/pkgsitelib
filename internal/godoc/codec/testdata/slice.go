@@ -7,7 +7,7 @@
 package somepkg
 
 import (
-	"golang.org/x/pkgsite/internal/godoc/codec"
+	"github.com/tailscale/pkgsitelib/internal/godoc/codec"
 )
 
 func encode_slice_slice_int(e *codec.Encoder, s [][]int) {

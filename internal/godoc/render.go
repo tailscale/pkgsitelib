@@ -15,12 +15,12 @@ import (
 	"strings"
 
 	"github.com/google/safehtml/template"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc/dochtml"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/stdlib"
 )
 
 const (

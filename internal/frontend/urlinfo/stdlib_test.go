@@ -7,7 +7,7 @@ package urlinfo
 import (
 	"testing"
 
-	"golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal/version"
 )
 
 func TestParseStdLibURLPath(t *testing.T) {

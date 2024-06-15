@@ -13,13 +13,13 @@ import (
 
 	"github.com/Masterminds/squirrel"
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/licenses"
-	"golang.org/x/pkgsite/internal/middleware/stats"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/middleware/stats"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/version"
 )
 
 // GetUnitMeta returns information about the "best" entity (module, path or directory) with

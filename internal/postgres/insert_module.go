@@ -17,16 +17,16 @@ import (
 	"unicode/utf8"
 
 	"github.com/lib/pq"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"go.opencensus.io/trace"
 	"golang.org/x/mod/module"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/licenses"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 // InsertModule inserts a version into the database using db.saveVersion, along

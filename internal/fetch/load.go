@@ -22,12 +22,12 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/trace"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/trace"
 )
 
 // BadPackageError represents an error loading a package

@@ -9,7 +9,8 @@ package somepkg
 import (
 	"go/ast"
 	"go/token"
-	"golang.org/x/pkgsite/internal/godoc/codec"
+
+	"github.com/tailscale/pkgsitelib/internal/godoc/codec"
 )
 
 // Fields of ast_BasicLit: ValuePos Kind Value

@@ -14,10 +14,10 @@ import (
 	"time"
 
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/testing/fakedatasource"
-	"golang.org/x/pkgsite/static"
-	thirdparty "golang.org/x/pkgsite/third_party"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/testing/fakedatasource"
+	"github.com/tailscale/pkgsitelib/static"
+	thirdparty "github.com/tailscale/pkgsitelib/third_party"
 )
 
 type testModule struct {

@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"golang.org/x/pkgsite/internal"
+	"github.com/tailscale/pkgsitelib/internal"
 )
 
 // FetchInfo describes a fetch in progress, or completed.

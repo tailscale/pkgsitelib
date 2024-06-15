@@ -13,7 +13,7 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
+	"github.com/tailscale/pkgsitelib/internal"
 	"gopkg.in/yaml.v3"
 )
 

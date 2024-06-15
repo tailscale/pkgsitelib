@@ -8,9 +8,9 @@ import (
 	"path"
 	"sort"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/licenses"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/licenses"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 // moduleUnit returns the requested unit in a given module, along

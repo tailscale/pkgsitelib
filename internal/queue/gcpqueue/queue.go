@@ -18,17 +18,17 @@ import (
 
 	cloudtasks "cloud.google.com/go/cloudtasks/apiv2"
 	taskspb "cloud.google.com/go/cloudtasks/apiv2/cloudtaskspb"
-	"golang.org/x/pkgsite/internal/config/serverconfig"
+	"github.com/tailscale/pkgsitelib/internal/config/serverconfig"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/durationpb"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/middleware"
-	"golang.org/x/pkgsite/internal/queue"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/middleware"
+	"github.com/tailscale/pkgsitelib/internal/queue"
 )
 
 // New creates a new Queue with name queueName based on the configuration

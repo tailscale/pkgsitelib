@@ -9,7 +9,7 @@ package main
 import (
 	"log"
 
-	"golang.org/x/pkgsite/internal/static"
+	"github.com/tailscale/pkgsitelib/internal/static"
 )
 
 func main() {

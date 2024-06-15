@@ -9,7 +9,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // pagination holds information related to paginated display. It is intended to

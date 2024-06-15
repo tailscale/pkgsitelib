@@ -8,13 +8,13 @@ import (
 	"net/http"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc"
-	"golang.org/x/pkgsite/internal/proxy/proxytest"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc"
+	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 )
 
 type testModule struct {

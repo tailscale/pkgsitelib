@@ -7,7 +7,7 @@
 // The calendrical calculations always assume a Gregorian calendar, with
 // no leap seconds.
 //
-// Monotonic Clocks
+// # Monotonic Clocks
 //
 // Operating systems provide both a “wall clock,” which is subject to
 // changes for clock synchronization, and a “monotonic clock,” which is
@@ -68,7 +68,6 @@
 // For debugging, the result of Time.String does include the monotonic
 // clock reading if present. If t != u because of different monotonic clock readings,
 // that difference will be visible when printing t.String() and u.String().
-//
 package time
 
 // A Time represents an instant in time with nanosecond precision.
@@ -110,7 +109,6 @@ package time
 // reading of the current process's monotonic clock, to provide additional precision
 // for comparison or subtraction.
 // See the “Monotonic Clocks” section in the package documentation for details.
-//
 type Time struct {
 	unexported struct{}
 }
@@ -251,13 +249,14 @@ type Duration int64
 // to avoid confusion across daylight savings time zone transitions.
 //
 // To count the number of units in a Duration, divide:
+//
 //	second := time.Second
 //	fmt.Print(int64(second/time.Millisecond)) // prints 1000
 //
 // To convert an integer number of units to a Duration, multiply:
+//
 //	seconds := 10
 //	fmt.Print(time.Duration(seconds)*time.Second) // prints 10s
-//
 const (
 	Nanosecond  Duration = 1
 	Microsecond          = 1000 * Nanosecond
@@ -450,7 +449,9 @@ func Unix(sec int64, nsec int64) Time {
 }
 
 // Date returns the Time corresponding to
+//
 //	yyyy-mm-dd hh:mm:ss + nsec nanoseconds
+//
 // in the appropriate zone for that time in the given location.
 //
 // The month, day, hour, min, sec, and nsec values may be outside
@@ -494,10 +495,14 @@ func (t Time) Round(d Duration) Time {
 
 // These are predefined layouts for use in Time.Format and time.Parse.
 // The reference time used in the layouts is the specific time:
+//
 //	Mon Jan 2 15:04:05 MST 2006
+//
 // which is Unix time 1136239445. Seeing that MST is GMT-0700,
 // the reference time can be thought of as
+//
 //	01/02 03:04:05PM '06 -0700
+//
 // To define your own format, write down what the reference time would look
 // like formatted your way; see the values of constants like ANSIC,
 // StampMicro or Kitchen for examples. The model is to demonstrate what the
@@ -518,12 +523,15 @@ func (t Time) Round(d Duration) Time {
 // series of digits is parsed as a fractional second.
 //
 // Numeric time zone offsets format as follows:
+//
 //	-0700  ±hhmm
 //	-07:00 ±hh:mm
 //	-07    ±hh
+//
 // Replacing the sign in the format with a Z triggers
 // the ISO 8601 behavior of printing Z instead of an
 // offset for the UTC zone. Thus:
+//
 //	Z0700  Z or ±hhmm
 //	Z07:00 Z or ±hh:mm
 //	Z07    Z or ±hh
@@ -569,6 +577,7 @@ const (
 )
 
 // String returns the time formatted using the format string
+//
 //	"2006-01-02 15:04:05.999999999 -0700 MST"
 //
 // If the time has a monotonic clock reading, the returned string
@@ -585,7 +594,9 @@ func (t Time) String() string {
 // Format returns a textual representation of the time value formatted
 // according to layout, which defines the format by showing how the reference
 // time, defined to be
+//
 //	Mon Jan 2 15:04:05 -0700 MST 2006
+//
 // would be displayed if it were the value; it serves as an example of the
 // desired output. The same display rules will then be applied to the time
 // value.
@@ -625,7 +636,9 @@ func (e *ParseError) Error() string {
 // Parse parses a formatted string and returns the time value it represents.
 // The layout defines the format by showing how the reference time,
 // defined to be
+//
 //	Mon Jan 2 15:04:05 -0700 MST 2006
+//
 // would be interpreted if it were the value; it serves as an example of
 // the input format. The same interpretation will then be made to the
 // input string.
@@ -707,9 +720,9 @@ type Timer struct {
 // check the return value and drain the channel.
 // For example, assuming the program has not received from t.C already:
 //
-// 	if !t.Stop() {
-// 		<-t.C
-// 	}
+//	if !t.Stop() {
+//		<-t.C
+//	}
 //
 // This cannot be done concurrent to other receives from the Timer's
 // channel.
@@ -741,10 +754,10 @@ func NewTimer(d Duration) *Timer {
 // the timer must be stopped and—if Stop reports that the timer expired
 // before being stopped—the channel explicitly drained:
 //
-// 	if !t.Stop() {
-// 		<-t.C
-// 	}
-// 	t.Reset(d)
+//	if !t.Stop() {
+//		<-t.C
+//	}
+//	t.Reset(d)
 //
 // This should not be done concurrent to other receives from the Timer's
 // channel.

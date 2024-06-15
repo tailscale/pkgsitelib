@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"testing"
 
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 func TestGetLatestMajorPathForV1Path(t *testing.T) {

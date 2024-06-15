@@ -6,7 +6,7 @@
 // It runs as a web server and presents the documentation as a
 // web page.
 //
-// To install, run `go install golang.org/x/pkgsite/cmd/pkgsite@latest`.
+// To install, run `go install github.com/tailscale/pkgsitelib/cmd/pkgsite@latest`.
 //
 // With no arguments, pkgsite will serve docs for main modules relative to the
 // current directory, i.e. the modules listed by `go list -m`. This is
@@ -58,12 +58,12 @@ import (
 	"strings"
 	"time"
 
-	"golang.org/x/pkgsite/cmd/internal/pkgsite"
-	"golang.org/x/pkgsite/internal/browser"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/middleware/timeout"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/cmd/internal/pkgsite"
+	"github.com/tailscale/pkgsitelib/internal/browser"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/middleware/timeout"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 const defaultAddr = "localhost:8080" // default webserver address

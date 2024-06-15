@@ -20,11 +20,11 @@ import (
 	"time"
 
 	"cloud.google.com/go/storage"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/secrets"
 	"golang.org/x/net/context/ctxhttp"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/secrets"
 	"gopkg.in/yaml.v3"
 )
 

@@ -24,9 +24,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 // ModulePath is the name of the module for the standard library.

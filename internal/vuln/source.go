@@ -16,7 +16,7 @@ import (
 	"path/filepath"
 	"sort"
 
-	"golang.org/x/pkgsite/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/osv"
 )
 
 type source interface {

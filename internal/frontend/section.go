@@ -7,7 +7,7 @@ package frontend
 import (
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
+	"github.com/tailscale/pkgsitelib/internal"
 )
 
 // A Section represents a collection of lines with a common prefix. The

@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"testing"
 
-	"golang.org/x/pkgsite/internal/frontend/versions"
-	"golang.org/x/pkgsite/internal/postgres"
-	"golang.org/x/pkgsite/internal/symbol"
+	"github.com/tailscale/pkgsitelib/internal/frontend/versions"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal/symbol"
 )
 
 func TestSymbols(t *testing.T) {

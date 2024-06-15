@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal"
+	"github.com/tailscale/pkgsitelib/internal"
 )
 
 func TestGetSymbols(t *testing.T) {

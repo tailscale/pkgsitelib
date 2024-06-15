@@ -6,7 +6,7 @@
 
 package fetch
 
-import "golang.org/x/pkgsite/internal"
+import "github.com/tailscale/pkgsitelib/internal"
 
 var ZipSignatures = map[string][]internal.Modver{
 

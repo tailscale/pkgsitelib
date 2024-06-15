@@ -5,8 +5,7 @@
 // Package p is for testing godoc.Render. There are a lot
 // of other things to say, but that's the gist of it.
 //
-//
-// Links
+// # Links
 //
 // - pkg.go.dev, https://pkg.go.dev
 package p

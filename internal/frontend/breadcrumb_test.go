@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal/version"
 )
 
 func TestBreadcrumbPath(t *testing.T) {

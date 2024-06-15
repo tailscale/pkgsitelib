@@ -10,7 +10,7 @@ import (
 	"net/http"
 
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal/frontend/page"
+	"github.com/tailscale/pkgsitelib/internal/frontend/page"
 )
 
 // ServerError is a type of error that can be dosplayed by the server.

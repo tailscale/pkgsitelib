@@ -12,10 +12,10 @@ import (
 	"sort"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/osv"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 	"golang.org/x/sync/errgroup"
 )
 

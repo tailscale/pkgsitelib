@@ -12,7 +12,7 @@ import (
 	"net/url"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // playgroundURL is the playground endpoint used for share links.

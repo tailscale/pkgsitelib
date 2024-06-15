@@ -9,7 +9,7 @@ import (
 	"os"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // ReadFileLines reads and returns the lines from a file.

@@ -21,7 +21,7 @@ import (
 	"github.com/jackc/pgconn"
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/stdlib"
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 const testDBName = "discovery_postgres_test"

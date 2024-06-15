@@ -1,4 +1,4 @@
-module golang.org/x/pkgsite
+module github.com/tailscale/pkgsitelib
 
 go 1.19
 

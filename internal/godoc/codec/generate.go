@@ -135,7 +135,7 @@ type generator struct {
 
 func (g *generator) generate() ([]byte, error) {
 	importMap := map[string]bool{
-		"golang.org/x/pkgsite/internal/godoc/codec": true,
+		"github.com/tailscale/pkgsitelib/internal/godoc/codec": true,
 	}
 	var code []byte
 	for len(g.todo) > 0 {

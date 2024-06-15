@@ -13,8 +13,8 @@ import (
 
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/stdlib"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // CopyInsert insert rows into table using the pgx driver's CopyFrom method.

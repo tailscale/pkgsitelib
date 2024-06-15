@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 type testUnitPage struct {

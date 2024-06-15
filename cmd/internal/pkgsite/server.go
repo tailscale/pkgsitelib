@@ -20,15 +20,15 @@ import (
 	"time"
 
 	"github.com/google/safehtml/template"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/fetch"
-	"golang.org/x/pkgsite/internal/fetchdatasource"
-	"golang.org/x/pkgsite/internal/frontend"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/static"
-	thirdparty "golang.org/x/pkgsite/third_party"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/fetch"
+	"github.com/tailscale/pkgsitelib/internal/fetchdatasource"
+	"github.com/tailscale/pkgsitelib/internal/frontend"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/static"
+	thirdparty "github.com/tailscale/pkgsitelib/third_party"
 )
 
 // ServerConfig provides configuration for BuildServer.

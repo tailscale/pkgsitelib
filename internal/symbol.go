@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"sort"
 
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal/derrors"
 )
 
 // SymbolSection is the documentation section where a symbol appears.

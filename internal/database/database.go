@@ -20,8 +20,8 @@ import (
 
 	"github.com/jackc/pgconn"
 	"github.com/lib/pq"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
 )
 
 // DB wraps a sql.DB. The methods it exports correspond closely to those of

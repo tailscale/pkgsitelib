@@ -5,6 +5,8 @@
 // Package symbols is designed to test symbols from a docPackage.
 package symbols
 
+import "errors"
+
 // const
 const C = 1
 

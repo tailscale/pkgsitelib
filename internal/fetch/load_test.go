@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 )
 
 func TestMatchingFiles(t *testing.T) {

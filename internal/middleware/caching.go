@@ -15,15 +15,15 @@ import (
 	"time"
 
 	"github.com/go-redis/redis/v8"
+	icache "github.com/tailscale/pkgsitelib/internal/cache"
+	"github.com/tailscale/pkgsitelib/internal/config"
+	"github.com/tailscale/pkgsitelib/internal/cookie"
+	"github.com/tailscale/pkgsitelib/internal/dcensus"
+	"github.com/tailscale/pkgsitelib/internal/log"
 	"go.opencensus.io/plugin/ochttp"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
-	icache "golang.org/x/pkgsite/internal/cache"
-	"golang.org/x/pkgsite/internal/config"
-	"golang.org/x/pkgsite/internal/cookie"
-	"golang.org/x/pkgsite/internal/dcensus"
-	"golang.org/x/pkgsite/internal/log"
 )
 
 var (

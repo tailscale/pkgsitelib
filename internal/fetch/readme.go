@@ -12,8 +12,8 @@ import (
 	"path"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 )
 
 // extractReadme returns the file path and contents the unit's README,

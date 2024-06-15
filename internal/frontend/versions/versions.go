@@ -13,14 +13,14 @@ import (
 	"time"
 	"unicode"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/fetch"
+	"github.com/tailscale/pkgsitelib/internal/frontend/serrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/version"
+	"github.com/tailscale/pkgsitelib/internal/vuln"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/fetch"
-	"golang.org/x/pkgsite/internal/frontend/serrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/version"
-	"golang.org/x/pkgsite/internal/vuln"
 )
 
 // VersionsDetails contains the hierarchy of version summary information used

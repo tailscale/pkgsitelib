@@ -21,9 +21,9 @@ import (
 	"strings"
 	"unicode"
 
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 	"golang.org/x/mod/semver"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/stdlib"
 )
 
 // ParsePackageAPIInfo parses apiVersions using contents of the specified directory.

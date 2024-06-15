@@ -16,16 +16,16 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/fetch"
-	"golang.org/x/pkgsite/internal/godoc"
-	"golang.org/x/pkgsite/internal/postgres"
-	"golang.org/x/pkgsite/internal/proxy"
-	"golang.org/x/pkgsite/internal/proxy/proxytest"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/testing/sample"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/fetch"
+	"github.com/tailscale/pkgsitelib/internal/godoc"
+	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/internal/proxy"
+	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 )
 
 // Check that when the proxy says it does not have module@version,

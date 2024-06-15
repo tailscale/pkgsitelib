@@ -16,8 +16,8 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
 )
 
 func TestSetAndLoadExperiments(t *testing.T) {

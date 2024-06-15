@@ -10,9 +10,9 @@ import (
 	"go/doc"
 	"go/token"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/godoc/dochtml/internal/render"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml/internal/render"
 )
 
 // GetSymbols renders package documentation HTML for the

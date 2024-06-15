@@ -10,7 +10,7 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"golang.org/x/pkgsite/internal/experiment"
+	"github.com/tailscale/pkgsitelib/internal/experiment"
 )
 
 func TestNewContextFromExps(t *testing.T) {

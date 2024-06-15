@@ -5,7 +5,7 @@
 package integration
 
 import (
-	"golang.org/x/pkgsite/internal/frontend/versions"
+	"github.com/tailscale/pkgsitelib/internal/frontend/versions"
 )
 
 var versionsPageMultiGoosDuplicates = []*versions.VersionList{

@@ -12,7 +12,7 @@ import (
 	"path"
 	"regexp"
 
-	"golang.org/x/pkgsite/internal/testing/htmlcheck"
+	"github.com/tailscale/pkgsitelib/internal/testing/htmlcheck"
 )
 
 // Page describes a discovery site web page for a package, module or directory.

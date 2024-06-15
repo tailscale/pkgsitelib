@@ -15,7 +15,7 @@ import (
 	"runtime"
 	"testing"
 
-	"golang.org/x/pkgsite/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/osv"
 )
 
 func TestNewSource(t *testing.T) {

@@ -31,12 +31,12 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal/trace"
+	"github.com/tailscale/pkgsitelib/internal/version"
 	"golang.org/x/net/context/ctxhttp"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/log"
-	"golang.org/x/pkgsite/internal/stdlib"
-	"golang.org/x/pkgsite/internal/trace"
-	"golang.org/x/pkgsite/internal/version"
 )
 
 // Info holds source information about a module, used to generate URLs referring

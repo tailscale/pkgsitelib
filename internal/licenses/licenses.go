@@ -33,9 +33,9 @@ import (
 	"sync"
 
 	"github.com/google/licensecheck"
+	"github.com/tailscale/pkgsitelib/internal/log"
 	"golang.org/x/mod/module"
 	modzip "golang.org/x/mod/zip"
-	"golang.org/x/pkgsite/internal/log"
 )
 
 //go:generate rm -f exceptions.gen.go

@@ -11,12 +11,12 @@ import (
 	"net/url"
 	"strings"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/frontend/page"
-	"golang.org/x/pkgsite/internal/frontend/serrors"
-	"golang.org/x/pkgsite/internal/osv"
-	"golang.org/x/pkgsite/internal/vuln"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/frontend/page"
+	"github.com/tailscale/pkgsitelib/internal/frontend/serrors"
+	"github.com/tailscale/pkgsitelib/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/vuln"
 )
 
 const (

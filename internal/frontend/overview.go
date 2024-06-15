@@ -12,11 +12,11 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/source"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/source"
 )
 
 // isMarkdown reports whether filename says that the file contains markdown.

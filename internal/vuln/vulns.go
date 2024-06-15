@@ -11,9 +11,9 @@ import (
 	"go/token"
 	"strings"
 
-	"golang.org/x/pkgsite/internal/osv"
-	"golang.org/x/pkgsite/internal/stdlib"
-	vers "golang.org/x/pkgsite/internal/version"
+	"github.com/tailscale/pkgsitelib/internal/osv"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	vers "github.com/tailscale/pkgsitelib/internal/version"
 )
 
 // A Vuln contains information to display about a vulnerability.

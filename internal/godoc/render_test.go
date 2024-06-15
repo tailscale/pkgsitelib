@@ -12,11 +12,11 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/safehtml/template"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/testing/htmlcheck"
 	"golang.org/x/net/html"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/godoc/dochtml"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/testing/htmlcheck"
 )
 
 var templateFS = template.TrustedFSFromTrustedSource(template.TrustedSourceFromConstant("../../static"))

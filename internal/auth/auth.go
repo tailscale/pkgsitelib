@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"golang.org/x/pkgsite/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
 	"google.golang.org/api/idtoken"
 )
 

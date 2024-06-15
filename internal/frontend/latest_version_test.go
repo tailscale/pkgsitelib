@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"testing"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/source"
-	"golang.org/x/pkgsite/internal/testing/fakedatasource"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/source"
+	"github.com/tailscale/pkgsitelib/internal/testing/fakedatasource"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 )
 
 func TestLatestMinorVersion(t *testing.T) {

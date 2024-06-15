@@ -23,9 +23,9 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	"github.com/google/safehtml/template"
+	"github.com/tailscale/pkgsitelib/internal/godoc/dochtml/internal/render"
+	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
 	"golang.org/x/net/html"
-	"golang.org/x/pkgsite/internal/godoc/dochtml/internal/render"
-	"golang.org/x/pkgsite/internal/testing/testhelper"
 )
 
 var templateFS = template.TrustedFSFromTrustedSource(template.TrustedSourceFromConstant("../../../static"))
@@ -263,43 +263,43 @@ func TestVersionedPkgPath(t *testing.T) {
 		},
 		{
 			name:    "imports from other modules are not versioned",
-			pkgPath: "golang.org/x/pkgsite",
+			pkgPath: "github.com/tailscale/pkgsitelib",
 			modInfo: &ModuleInfo{
 				ModulePath:      "cloud.google.com/go",
 				ResolvedVersion: "v0.60.0",
 				ModulePackages:  map[string]bool{"cloud.google.com/go/civil": true},
 			},
-			want: "golang.org/x/pkgsite",
+			want: "github.com/tailscale/pkgsitelib",
 		},
 		{
 			name:    "imports from other modules with shared prefixes are not versioned",
-			pkgPath: "golang.org/x/pkgsite",
+			pkgPath: "github.com/tailscale/pkgsitelib",
 			modInfo: &ModuleInfo{
 				ModulePath:      "golang.org/x/time",
 				ResolvedVersion: "v1.2.3",
 				ModulePackages:  map[string]bool{"golang.org/x/time/rate": true},
 			},
-			want: "golang.org/x/pkgsite",
+			want: "github.com/tailscale/pkgsitelib",
 		},
 		{
 			name:    "imports from same module are versioned",
-			pkgPath: "golang.org/x/pkgsite/internal/log",
+			pkgPath: "github.com/tailscale/pkgsitelib/internal/log",
 			modInfo: &ModuleInfo{
-				ModulePath:      "golang.org/x/pkgsite",
+				ModulePath:      "github.com/tailscale/pkgsitelib",
 				ResolvedVersion: "v1.1.2",
-				ModulePackages:  map[string]bool{"golang.org/x/pkgsite/internal/log": true},
+				ModulePackages:  map[string]bool{"github.com/tailscale/pkgsitelib/internal/log": true},
 			},
-			want: "golang.org/x/pkgsite@v1.1.2/internal/log",
+			want: "github.com/tailscale/pkgsitelib@v1.1.2/internal/log",
 		},
 		{
 			name:    "imports from same module with pseudo version are versioned",
-			pkgPath: "golang.org/x/pkgsite/internal/log",
+			pkgPath: "github.com/tailscale/pkgsitelib/internal/log",
 			modInfo: &ModuleInfo{
-				ModulePath:      "golang.org/x/pkgsite",
+				ModulePath:      "github.com/tailscale/pkgsitelib",
 				ResolvedVersion: "v0.0.0-20200709011933-a59b4ce778c4",
-				ModulePackages:  map[string]bool{"golang.org/x/pkgsite/internal/log": true},
+				ModulePackages:  map[string]bool{"github.com/tailscale/pkgsitelib/internal/log": true},
 			},
-			want: "golang.org/x/pkgsite@v0.0.0-20200709011933-a59b4ce778c4/internal/log",
+			want: "github.com/tailscale/pkgsitelib@v0.0.0-20200709011933-a59b4ce778c4/internal/log",
 		},
 		{
 			name:    "imports from same v2 module are versioned",

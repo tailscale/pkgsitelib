@@ -8,9 +8,9 @@ import (
 	"path"
 	"time"
 
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 	"golang.org/x/mod/module"
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/stdlib"
 )
 
 const (

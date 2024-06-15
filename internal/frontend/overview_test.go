@@ -8,8 +8,8 @@ import (
 	"net/url"
 	"testing"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/stdlib"
 )
 
 func TestTrimmedEscapedPath(t *testing.T) {

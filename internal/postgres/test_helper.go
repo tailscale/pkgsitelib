@@ -15,10 +15,10 @@ import (
 	"testing"
 	"time"
 
-	"golang.org/x/pkgsite/internal"
-	"golang.org/x/pkgsite/internal/database"
-	"golang.org/x/pkgsite/internal/derrors"
-	"golang.org/x/pkgsite/internal/testing/sample"
+	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/internal/database"
+	"github.com/tailscale/pkgsitelib/internal/derrors"
+	"github.com/tailscale/pkgsitelib/internal/testing/sample"
 
 	// imported to register the postgres migration driver
 	_ "github.com/golang-migrate/migrate/v4/database/postgres"
