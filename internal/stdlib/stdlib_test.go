@@ -10,6 +10,7 @@ import (
 	"flag"
 	"io/fs"
 	"reflect"
+	"strings"
 	"testing"
 
 	"github.com/tailscale/pkgsitelib/internal/testenv"
@@ -407,6 +408,9 @@ func TestResolveSupportedBranches(t *testing.T) {
 
 	got, err := ResolveSupportedBranches()
 	if err != nil {
+		if strings.Contains(err.Error(), "Could not resolve host") {
+			t.Skip("no network connectivity")
+		}
 		t.Fatal(err)
 	}
 	// We can't check the hashes because they change, but we can check the keys.
