@@ -18,13 +18,13 @@ import (
 	"strings"
 
 	_ "github.com/jackc/pgx/v4/stdlib" // for pgx driver
-	"github.com/tailscale/pkgsitelib/internal/config/serverconfig"
-	"github.com/tailscale/pkgsitelib/internal/database"
-	"github.com/tailscale/pkgsitelib/internal/derrors"
-	"github.com/tailscale/pkgsitelib/internal/frontend"
-	"github.com/tailscale/pkgsitelib/internal/frontend/client"
-	"github.com/tailscale/pkgsitelib/internal/log"
-	"github.com/tailscale/pkgsitelib/internal/postgres"
+	"github.com/tailscale/pkgsitelib/pkg/config/serverconfig"
+	"github.com/tailscale/pkgsitelib/pkg/database"
+	"github.com/tailscale/pkgsitelib/pkg/derrors"
+	"github.com/tailscale/pkgsitelib/pkg/frontend"
+	"github.com/tailscale/pkgsitelib/pkg/frontend/client"
+	"github.com/tailscale/pkgsitelib/pkg/log"
+	"github.com/tailscale/pkgsitelib/pkg/postgres"
 )
 
 var frontendHost = flag.String("frontend", "http://localhost:8080",

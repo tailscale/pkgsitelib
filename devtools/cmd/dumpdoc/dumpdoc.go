@@ -22,10 +22,10 @@ import (
 	"strings"
 
 	_ "github.com/jackc/pgx/v4/stdlib" // for pgx driver
-	"github.com/tailscale/pkgsitelib/internal/config/serverconfig"
-	"github.com/tailscale/pkgsitelib/internal/database"
-	"github.com/tailscale/pkgsitelib/internal/godoc"
-	"github.com/tailscale/pkgsitelib/internal/log"
+	"github.com/tailscale/pkgsitelib/pkg/config/serverconfig"
+	"github.com/tailscale/pkgsitelib/pkg/database"
+	"github.com/tailscale/pkgsitelib/pkg/godoc"
+	"github.com/tailscale/pkgsitelib/pkg/log"
 )
 
 var (

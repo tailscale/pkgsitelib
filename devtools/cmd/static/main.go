@@ -9,7 +9,7 @@ package main
 import (
 	"log"
 
-	"github.com/tailscale/pkgsitelib/internal/static"
+	"github.com/tailscale/pkgsitelib/pkg/static"
 )
 
 func main() {

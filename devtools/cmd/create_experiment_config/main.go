@@ -13,7 +13,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/tailscale/pkgsitelib/internal"
+	"github.com/tailscale/pkgsitelib/pkg"
 	"gopkg.in/yaml.v3"
 )
 

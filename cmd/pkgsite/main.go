@@ -59,11 +59,11 @@ import (
 	"time"
 
 	"github.com/tailscale/pkgsitelib/cmd/internal/pkgsite"
-	"github.com/tailscale/pkgsitelib/internal/browser"
-	"github.com/tailscale/pkgsitelib/internal/log"
-	"github.com/tailscale/pkgsitelib/internal/middleware/timeout"
-	"github.com/tailscale/pkgsitelib/internal/proxy"
-	"github.com/tailscale/pkgsitelib/internal/stdlib"
+	"github.com/tailscale/pkgsitelib/pkg/browser"
+	"github.com/tailscale/pkgsitelib/pkg/log"
+	"github.com/tailscale/pkgsitelib/pkg/middleware/timeout"
+	"github.com/tailscale/pkgsitelib/pkg/proxy"
+	"github.com/tailscale/pkgsitelib/pkg/stdlib"
 )
 
 const defaultAddr = "localhost:8080" // default webserver address

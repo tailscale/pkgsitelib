@@ -14,10 +14,10 @@ import (
 	"regexp"
 	"testing"
 
-	"github.com/tailscale/pkgsitelib/internal/proxy/proxytest"
-	"github.com/tailscale/pkgsitelib/internal/testenv"
-	"github.com/tailscale/pkgsitelib/internal/testing/htmlcheck"
-	"github.com/tailscale/pkgsitelib/internal/testing/testhelper"
+	"github.com/tailscale/pkgsitelib/pkg/proxy/proxytest"
+	"github.com/tailscale/pkgsitelib/pkg/testenv"
+	"github.com/tailscale/pkgsitelib/pkg/testing/htmlcheck"
+	"github.com/tailscale/pkgsitelib/pkg/testing/testhelper"
 	"golang.org/x/net/html"
 )
 
@@ -51,8 +51,8 @@ module example.com/testmod
 -- a.go --
 package a
 `)
-	cacheDir := repoPath("internal/fetch/testdata/modcache")
-	testModules := proxytest.LoadTestModules(repoPath("internal/proxy/testdata"))
+	cacheDir := repoPath("pkg/fetch/testdata/modcache")
+	testModules := proxytest.LoadTestModules(repoPath("pkg/proxy/testdata"))
 	prox, teardown := proxytest.SetupTestClient(t, testModules)
 	defer teardown()
 
