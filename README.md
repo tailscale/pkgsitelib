@@ -1,70 +1,20 @@
-# golang.org/x/pkgsite
+# pkgsitelib
 
-This repository hosts the source code of the [pkg.go.dev](https://pkg.go.dev) website,
-and [`pkgsite`](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite), a documentation
-server program.
+pkgsitelib is a fork of [golang.org/x/pkgsite] that is intended to be used as a library for other projects.
 
-[![Go Reference](https://pkg.go.dev/badge/golang.org/x/pkgsite.svg)](https://pkg.go.dev/golang.org/x/pkgsite)
+pkgsite is built very explicitly to host the [pkg.go.dev] website, and as such,
+it doesn't make it super easy to [run locally] (though that is gradually improving).
+It is also not easy to customize or pull into another project as a library.
+For example, almost the entire codebase is within an "internal" package,
+which makes it impossible to import into another project.
 
-## pkg.go.dev: a site for discovering Go packages
+pkgsitelib only does a few things, most notably of which is to eliminate the top "internal" package.
+There are still several "internal" subpackages, but those have been left alone for now.
+It also includes a couple of minor changes to make it easier to use or customize.
+Ideally, this project will become obsolete and go away as pkgsite becomes more modular.
 
-Pkg.go.dev is a website for discovering and evaluating Go packages and modules.
+This is used internally at Tailscale to host documentation for our private Go packages.
 
-You can check it out at [https://pkg.go.dev](https://pkg.go.dev).
-
-## pkgsite: a documentation server
-
-`pkgsite` program extracts and generates documentation for Go projects.
-
-Example usage:
-
-```
-$ go install golang.org/x/pkgsite/cmd/pkgsite@latest
-$ cd myproject
-$ pkgsite -open .
-```
-
-For more information, see the [pkgsite documentation](https://pkg.go.dev/golang.org/x/pkgsite/cmd/pkgsite).
-
-## Requirements
-
-Pkgsite requires Go 1.19 to run.
-The last commit that works with Go 1.18 is
-9ffe8b928e4fbd3ff7dcf984254629a47f8b6e63.
-The last commit that works with Go 1.17 is
-4d836c6a652cde92f433967680dfd6171a91ec12.
-
-## Issues
-
-If you want to report a bug or have a feature suggestion, please first check
-the [known issues](https://github.com/golang/go/labels/pkgsite) to see if your
-issue is already being discussed. If an issue does not already exist, feel free
-to [file an issue](https://golang.org/s/pkgsite-feedback).
-
-For answers to frequently asked questions, see [pkg.go.dev/about](https://pkg.go.dev/about).
-
-You can also chat with us on the
-[#pkgsite Slack channel](https://gophers.slack.com/archives/C0166L4QGJV) on the
-[Gophers Slack](https://invite.slack.golangbridge.org).
-
-## Contributing
-
-We would love your help!
-
-Our canonical Git repository is located at
-[go.googlesource.com/pkgsite](https://go.googlesource.com/pkgsite).
-There is a mirror of the repository at
-[github.com/golang/pkgsite](https://github.com/golang/pkgsite).
-
-To contribute, please read our [contributing guide](CONTRIBUTING.md).
-
-## License
-
-Unless otherwise noted, the Go source files are distributed under the BSD-style
-license found in the [LICENSE](LICENSE) file.
-
-## Links
-
-- [Homepage](https://pkg.go.dev)
-- [Feedback](https://golang.org/s/pkgsite-feedback)
-- [Issue Tracker](https://golang.org/s/pkgsite-issues)
+[golang.org/x/pkgsite]: (https://pkg.go.dev/golang.org/x/pkgsite)
+[pkg.go.dev]: (https://pkg.go.dev)
+[run locally]: https://github.com/golang/go/issues/40371
