@@ -13,7 +13,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/godoc"
 	"github.com/tailscale/pkgsitelib/pkg/licenses"
@@ -181,6 +181,9 @@ func (lm *LazyModule) Unit(ctx context.Context, path string) (*internal.Unit, er
 		if um.Path == path {
 			unitMeta = um
 		}
+	}
+	if unitMeta == nil {
+		return nil, fmt.Errorf("unit %v does not exist in module", path)
 	}
 	u, _, err := lm.unit(ctx, unitMeta)
 	if err == nil && u == nil {
