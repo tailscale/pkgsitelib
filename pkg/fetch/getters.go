@@ -25,7 +25,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/fuzzy"
 	"github.com/tailscale/pkgsitelib/pkg/log"
@@ -222,6 +222,10 @@ func (g *directoryModuleGetter) fileServingPath() string {
 // For testing.
 func (g *directoryModuleGetter) String() string {
 	return fmt.Sprintf("Dir(%s, %s)", g.modulePath, g.dir)
+}
+
+func (g *directoryModuleGetter) ModulePath() string {
+	return g.modulePath
 }
 
 // A goPackagesModuleGetter is a ModuleGetter whose source is go/packages.Load
