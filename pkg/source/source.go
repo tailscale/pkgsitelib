@@ -46,6 +46,10 @@ type Info struct {
 	moduleDir string       // directory of module relative to repo root
 	commit    string       // tag or ID of commit corresponding to version
 	templates urlTemplates // for building URLs
+
+	// If set, FilterPackageURL is called with package URLs included in rendered docs.
+	// The returned value is used in place of the original package URL.
+	FilterPackageURL func(string) string
 }
 
 // RepoURL returns a URL for the home page of the repository.

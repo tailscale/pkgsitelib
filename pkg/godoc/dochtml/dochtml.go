@@ -26,7 +26,7 @@ import (
 	"github.com/google/safehtml/legacyconversions"
 	"github.com/google/safehtml/template"
 	"github.com/google/safehtml/uncheckedconversions"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/godoc/dochtml/internal/render"
 	"golang.org/x/text/cases"
@@ -61,9 +61,10 @@ type RenderOptions struct {
 	SinceVersionFunc func(name string) string
 	// ModInfo optionally specifies information about the module the package
 	// belongs to in order to render module-related documentation.
-	ModInfo      *ModuleInfo
-	Limit        int64 // If zero, a default limit of 10 megabytes is used.
-	BuildContext internal.BuildContext
+	ModInfo          *ModuleInfo
+	Limit            int64 // If zero, a default limit of 10 megabytes is used.
+	BuildContext     internal.BuildContext
+	FilterPackageURL func(string) string
 }
 
 // TemplateData holds the data passed to the HTML templates in this package.
@@ -263,7 +264,12 @@ func renderInfo(ctx context.Context, fset *token.FileSet, p *doc.Package, opt Re
 			if opt.BuildContext.GOOS != "" && opt.BuildContext.GOOS != "all" {
 				search = "?GOOS=" + opt.BuildContext.GOOS
 			}
-			return "/" + versionedPath + search
+			pkgURL := "/" + versionedPath + search
+			if opt.FilterPackageURL != nil {
+				pkgURL = opt.FilterPackageURL(pkgURL)
+			}
+			return pkgURL
+
 		},
 	})
 

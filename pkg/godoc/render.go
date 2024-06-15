@@ -15,7 +15,7 @@ import (
 	"strings"
 
 	"github.com/google/safehtml/template"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/godoc/dochtml"
 	"github.com/tailscale/pkgsitelib/pkg/source"
@@ -167,6 +167,7 @@ func (p *Package) renderOptions(innerPath string, sourceInfo *source.Info, modIn
 		SinceVersionFunc: sinceVersionFunc(modInfo.ModulePath, nameToVersion),
 		Limit:            int64(MaxDocumentationHTML),
 		BuildContext:     bc,
+		FilterPackageURL: sourceInfo.FilterPackageURL,
 	}
 }
 
