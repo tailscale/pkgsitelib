@@ -20,7 +20,7 @@ import (
 	"time"
 
 	"github.com/google/safehtml/template"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/config"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/experiment"
@@ -231,6 +231,12 @@ Sitemap: https://pkg.go.dev/sitemap/index.xml
 	}))
 	s.installDebugHandlers(handle)
 }
+
+// StaticHandler returns a handler for serving static files.
+func (s *Server) StaticHandler() http.Handler { return s.staticHandler() }
+
+// UnitDetailsHandler returns a handler for serving papckage/directory/module detail pages.
+func (s *Server) UnitDetailsHandler() http.Handler { return s.errorHandler(s.serveDetails) }
 
 // installDebugHandlers installs handlers for debugging. Most of the handlers
 // are provided by the net/http/pprof package. Although that package installs
