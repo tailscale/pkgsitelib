@@ -7,7 +7,7 @@ package frontend
 import (
 	"path"
 
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/frontend/versions"
 	"github.com/tailscale/pkgsitelib/pkg/stdlib"
 	"github.com/tailscale/pkgsitelib/pkg/version"
@@ -20,9 +20,15 @@ func displayBreadcrumb(um *internal.UnitMeta, requestedVersion string) breadcrum
 	if um.ModulePath == stdlib.ModulePath && um.Path != stdlib.ModulePath {
 		bc.Links = append([]link{{Href: "/std", Body: "Standard library"}}, bc.Links...)
 	}
-	bc.Links = append([]link{{Href: "/", Body: "Discover Packages"}}, bc.Links...)
+	if ShowBreadcrumbDiscoverLink {
+		bc.Links = append([]link{{Href: "/", Body: "Discover Packages"}}, bc.Links...)
+	}
 	return bc
 }
+
+// ShowBreadcrumbDiscoverLink determines if hte initial "Discover Packages" link
+// is included in the unit breadcrumb links.
+var ShowBreadcrumbDiscoverLink = true
 
 type breadcrumb struct {
 	Links    []link
