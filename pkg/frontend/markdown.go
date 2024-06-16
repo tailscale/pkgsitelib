@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"github.com/google/safehtml/template"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/log"
 	"github.com/tailscale/pkgsitelib/pkg/source"
@@ -36,6 +36,14 @@ func ProcessReadme(ctx context.Context, u *internal.Unit) (_ *Readme, err error)
 	return processReadme(ctx, u.Readme, u.SourceInfo)
 }
 
+var (
+	// RewriteLinks controls whether links in the README file are rewritten.
+	RewriteLinks bool = true
+
+	// RewriteImgSrc controls whether img src values in the README file are rewritten.
+	RewriteImgSrc bool = true
+)
+
 func processReadme(ctx context.Context, readme *internal.Readme, info *source.Info) (frontendReadme *Readme, err error) {
 	if readme == nil || readme.Contents == "" {
 		return &Readme{}, nil
@@ -58,8 +66,12 @@ func processReadme(ctx context.Context, readme *internal.Readme, info *source.In
 		Emoji:         true,
 	}
 	doc := p.Parse(readme.Contents)
-	(&linkRewriter{info, readme}).rewriteLinks(doc)
-	rewriteImgSrc(doc, info, readme)
+	if RewriteLinks {
+		(&linkRewriter{info, readme}).rewriteLinks(doc)
+	}
+	if RewriteImgSrc {
+		rewriteImgSrc(doc, info, readme)
+	}
 	rewriteHeadingIDs(doc) // rewrite heading ids before extractTOC extracts them
 	et := &extractTOC{ctx: ctx, removeTitle: true}
 	et.extract(doc)
