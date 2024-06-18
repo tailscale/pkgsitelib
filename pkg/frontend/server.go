@@ -238,6 +238,9 @@ func (s *Server) StaticHandler() http.Handler { return s.staticHandler() }
 // UnitDetailsHandler returns a handler for serving papckage/directory/module detail pages.
 func (s *Server) UnitDetailsHandler() http.Handler { return s.errorHandler(s.serveDetails) }
 
+// SearchHandler returns a handler for searching packages and symbols.
+func (s *Server) SearchHandler() http.Handler { return s.errorHandler(s.serveSearch) }
+
 // installDebugHandlers installs handlers for debugging. Most of the handlers
 // are provided by the net/http/pprof package. Although that package installs
 // them on the default ServeMux in its init function, we must install them on
