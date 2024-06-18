@@ -15,7 +15,7 @@ import (
 
 	"github.com/google/safehtml"
 	"github.com/google/safehtml/uncheckedconversions"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/cookie"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/frontend/page"
@@ -107,6 +107,9 @@ type UnitPage struct {
 	IsGoProject bool
 }
 
+// GenerateDepsDevURL controls whether a deps.dev URL is generated for the module.
+var GenerateDepsDevURL = true
+
 // serveUnitPage serves a unit page for a path.
 func (s *Server) serveUnitPage(ctx context.Context, w http.ResponseWriter, r *http.Request,
 	ds internal.DataSource, info *urlinfo.URLPathInfo) (err error) {
@@ -136,7 +139,12 @@ func (s *Server) serveUnitPage(ctx context.Context, w http.ResponseWriter, r *ht
 		return s.fetchServer.ServePathNotFoundPage(w, r, db, info.FullPath, info.ModulePath, info.RequestedVersion)
 	}
 
-	makeDepsDevURL := depsDevURLGenerator(ctx, s.depsDevHTTPClient, um)
+	var makeDepsDevURL func() string
+	if GenerateDepsDevURL {
+		makeDepsDevURL = depsDevURLGenerator(ctx, s.depsDevHTTPClient, um)
+	} else {
+		makeDepsDevURL = func() string { return "" }
+	}
 
 	// Use GOOS and GOARCH query parameters to create a build context, which
 	// affects the documentation and synopsis. Omitting both results in an empty
