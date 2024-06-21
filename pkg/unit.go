@@ -5,6 +5,7 @@
 package internal
 
 import (
+	"github.com/google/safehtml"
 	"github.com/tailscale/pkgsitelib/pkg/licenses"
 )
 
@@ -57,6 +58,8 @@ type Unit struct {
 	// SymbolHistory is a map of symbolName to the version when the symbol was
 	// first added to the package.
 	SymbolHistory map[string]string
+
+	MainContent safehtml.HTML
 }
 
 // Documentation is the rendered documentation for a given package

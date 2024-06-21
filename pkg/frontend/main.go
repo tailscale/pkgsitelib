@@ -10,7 +10,7 @@ import (
 
 	"github.com/google/safehtml"
 	"github.com/google/safehtml/template"
-	"github.com/tailscale/pkgsitelib/pkg"
+	internal "github.com/tailscale/pkgsitelib/pkg"
 	"github.com/tailscale/pkgsitelib/pkg/derrors"
 	"github.com/tailscale/pkgsitelib/pkg/frontend/serrors"
 	"github.com/tailscale/pkgsitelib/pkg/godoc"
@@ -38,6 +38,10 @@ type MainDetails struct {
 	// CommitTime is time that this version was published, or the time that
 	// has elapsed since this version was committed if it was done so recently.
 	CommitTime string
+
+	// Content is the rendered HTML of the entire main page content.
+	// This is only populated on pages that handle their own rendering.
+	Content safehtml.HTML
 
 	// Readme is the rendered readme HTML.
 	Readme safehtml.HTML
@@ -214,6 +218,7 @@ func fetchMainDetails(ctx context.Context, ds internal.DataSource, um *internal.
 		Directories:       unitDirectories(append(subdirectories, nestedModules...)),
 		Licenses:          transformLicenseMetadata(unit.Licenses),
 		CommitTime:        absoluteTime(um.CommitTime),
+		Content:           unit.MainContent,
 		Readme:            readme.HTML,
 		ReadmeOutline:     readme.Outline,
 		ReadmeLinks:       readme.Links,
