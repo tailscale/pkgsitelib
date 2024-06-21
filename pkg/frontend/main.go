@@ -176,6 +176,14 @@ func fetchMainDetails(ctx context.Context, ds internal.DataSource, um *internal.
 		files = sourceFiles(unit, docPkg)
 		end()
 	}
+
+	// Allow datasource to provide additional files to be listed.
+	if gaf, ok := ds.(interface{ GetAdditionalFiles(string) []*File }); ok && gaf != nil {
+		if af := gaf.GetAdditionalFiles(um.Path); af != nil {
+			files = append(files, af...)
+		}
+	}
+
 	// If the unit is not a module, fetch the module readme to extract its
 	// links.
 	// In the unlikely event that the module is redistributable but the unit is
