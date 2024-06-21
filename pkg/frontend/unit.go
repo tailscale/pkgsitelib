@@ -254,7 +254,10 @@ func (s *Server) serveUnitPage(ctx context.Context, w http.ResponseWriter, r *ht
 	// Get vulnerability information.
 	page.Vulns = vuln.VulnsForPackage(ctx, um.ModulePath, um.Version, um.Path, s.vulnClient)
 
-	s.servePage(ctx, w, tabSettings.TemplateName, page)
+	if s.modifyUnitPage != nil {
+		s.modifyUnitPage(&page)
+	}
+	s.servePage(ctx, w, page.SelectedTab.TemplateName, page)
 	return nil
 }
 

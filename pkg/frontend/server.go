@@ -63,6 +63,9 @@ type Server struct {
 
 	mu        sync.Mutex // Protects all fields below
 	templates map[string]*template.Template
+
+	// If non-nil, ModifyUnitPage is called just before serving a unit page.
+	modifyUnitPage func(*UnitPage)
 }
 
 // FetchServerInterface is an interface for the parts of the server
@@ -94,6 +97,7 @@ type ServerConfig struct {
 	Reporter          derrors.Reporter
 	VulndbClient      *vuln.Client
 	DepsDevHTTPClient *http.Client
+	ModifyUnitPage    func(*UnitPage)
 }
 
 // NewServer creates a new Server for the given database and template directory.
@@ -119,6 +123,7 @@ func NewServer(scfg ServerConfig) (_ *Server, err error) {
 		fileMux:           http.NewServeMux(),
 		vulnClient:        scfg.VulndbClient,
 		depsDevHTTPClient: scfg.DepsDevHTTPClient,
+		modifyUnitPage:    scfg.ModifyUnitPage,
 	}
 	if s.depsDevHTTPClient == nil {
 		s.depsDevHTTPClient = http.DefaultClient
