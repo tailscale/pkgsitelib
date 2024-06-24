@@ -403,6 +403,9 @@ var htmlQuoteEscaper = strings.NewReplacer(
 	">", "&gt;",
 )
 
+// ReadmeHeadingIDPrefix is the prefix for all heading ids in the readme.
+var ReadmeHeadingIDPrefix = "readme-"
+
 // rewriteHeadingIDs generates ids based on the body of the heading.
 // The ASCII letters and numbers from the text are used to generate
 // each of the ids. Finally, all heading ids
@@ -433,7 +436,7 @@ func rewriteHeadingIDs(doc *markdown.Document) {
 			}
 			key = fmt.Sprintf("%s-%d", str, i)
 		}
-		return "readme-" + key
+		return ReadmeHeadingIDPrefix + key
 	}
 
 	walkBlocks(doc.Blocks, func(b markdown.Block) error {
