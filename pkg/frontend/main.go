@@ -181,10 +181,13 @@ func fetchMainDetails(ctx context.Context, ds internal.DataSource, um *internal.
 		end()
 	}
 
-	// Allow datasource to provide additional files to be listed.
-	if gaf, ok := ds.(interface{ GetAdditionalFiles(string) []*File }); ok && gaf != nil {
-		if af := gaf.GetAdditionalFiles(um.Path); af != nil {
+	// Allow datasource to provide additional files and directories to be listed.
+	if gaf, ok := ds.(interface {
+		GetAdditionalFiles(string) ([]*File, []*DirectoryInfo)
+	}); ok && gaf != nil {
+		if af, ad := gaf.GetAdditionalFiles(um.Path); af != nil {
 			files = append(files, af...)
+			subdirectories = append(subdirectories, ad...)
 		}
 	}
 
